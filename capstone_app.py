@@ -33,3 +33,6 @@ elif(choice=='Analysis'):
     st.bar_chart(dataframe['field2'])
     st.line_chart(dataframe['field3'])
     st.bar_chart(dataframe['field3'])
+    fig = plt.figure()
+    plt.plot(dataframe['field1'])
+    
