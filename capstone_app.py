@@ -18,13 +18,13 @@ st.write(data_json2)
 
 dataframe=pd.DataFrame(data_json1['feeds'], columns=['entry_id','field1','field2','field3'])
 st.title("Welcome To Our Boost Converter Monitoring Online UI")
-st.write("Click to see the current parameters")
 menu = ["Home", "Analysis"]
 choice = st.sidebar.selectbox('Menu',menu)
 if(choice=='Home'):
-    st.write("Check out Analysis section")
+    st.write("Click to see the current parameters")
+    st.write("Check out Analysis Section")
 elif(choice=='Analysis'):
-    st.write("Streamlit From Colab")
+    st.write("Analysis Section")
     st.write(dataframe)
     st.altair_chart(alt.Chart(dataframe).mark_line().encode(x='entry_id:O',y='field1:N'))
     st.altair_chart(alt.Chart(dataframe).mark_line().encode(x='entry_id:O',y='field2:N'))
