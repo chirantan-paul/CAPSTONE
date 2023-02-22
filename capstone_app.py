@@ -42,5 +42,5 @@ elif(choice=='Analysis'):
     st.write(dafra)
     st.line_chart(dafra)
     import altair as alt
-    c = alt.Chart(dafra).mark_circle().encode(x='entry_id', y='filed1', size='c', color='c', tooltip=['a', 'b', 'c'])
+    c = alt.Chart(dafra).mark_circle().encode(x='entry_id', y='filed1', size='c', color='c')
     st.altair_chart(c, use_container_width=True)
