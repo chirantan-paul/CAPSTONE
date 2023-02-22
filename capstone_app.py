@@ -39,4 +39,4 @@ elif(choice=='Analysis'):
     st.pyplot(fig)
     chart_data = pd.DataFrame(np.random.randn(20, 3),columns=['a', 'b', 'c'])
     st.line_chart(chart_data)
-    st.line_chart(dafra)
+    st.line_chart(dafra['field1'])
