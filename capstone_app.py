@@ -36,3 +36,5 @@ elif(choice=='Analysis'):
     fig = matplotlib.pyplot.figure()
     matplotlib.pyplot.plot(dataframe['field1'])
     st.pyplot(fig)
+    chart_data = pd.DataFrame(np.random.randn(20, 3),columns=['a', 'b', 'c'])
+    st.line_chart(chart_data)
