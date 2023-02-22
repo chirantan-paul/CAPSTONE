@@ -35,4 +35,4 @@ elif(choice=='Analysis'):
     st.bar_chart(dataframe['field3'])
     fig = plt.figure()
     plt.plot(dataframe['field1'])
-    
+    st.pyplot(fig)
