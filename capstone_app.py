@@ -12,19 +12,20 @@ url2 = "https://thingspeak.com/channels/1538779/feeds/last.json"
 response1 = urlopen(url1)
 response2 = urlopen(url2)
 data_json1 = json.loads(response1.read())
-st.json(data_json1)
 data_json2 = json.loads(response2.read())
+
+st.title("Welcome To Our Boost Converter Monitoring Online UI")
+st.write("Scroll dwon to see the current parameters")
+st.json(data_json1)
 st.write(data_json2)
 
-dataframe=pd.DataFrame(data_json1['feeds'], columns=['entry_id','field1','field2','field3'])
-st.title("Welcome To Our Boost Converter Monitoring Online UI")
 menu = ["Home", "Analysis"]
 choice = st.sidebar.selectbox('Menu',menu)
 if(choice=='Home'):
-    st.write("Click to see the current parameters")
     st.write("Check out Analysis Section")
 elif(choice=='Analysis'):
     st.write("Analysis Section")
+    dataframe=pd.DataFrame(data_json1['feeds'], columns=['entry_id','field1','field2','field3'])
     st.write(dataframe)
     st.altair_chart(alt.Chart(dataframe).mark_line().encode(x='entry_id:O',y='field1:Q'),use_container_width=True)
     st.altair_chart(alt.Chart(dataframe).mark_line().encode(x='entry_id:O',y='field2:Q'),use_container_width=True)
