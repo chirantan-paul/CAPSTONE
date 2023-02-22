@@ -26,7 +26,7 @@ if(choice=='Home'):
 elif(choice=='Analysis'):
     st.write("Analysis Section")
     st.write(dataframe)
-    st.altair_chart(alt.Chart(dataframe).mark_line().encode(x='entry_id:O',y='field1:N'),use_container_width=True)
+    st.altair_chart(alt.Chart(dataframe).mark_line().encode(x='entry_id:O',y='field1:Q'),use_container_width=True)
     st.altair_chart(alt.Chart(dataframe).mark_line().encode(x='entry_id:O',y='field2:N'),use_container_width=True)
     st.altair_chart(alt.Chart(dataframe).mark_line().encode(x='entry_id:O',y='field3:N'),use_container_width=True)
     st.altair_chart(alt.Chart(dataframe).mark_bar().encode(x='entry_id:O',y='field1:N'),use_container_width=True)
