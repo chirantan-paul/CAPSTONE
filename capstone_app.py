@@ -20,7 +20,7 @@ menu = ["Home", "Analysis"]
 choice = st.sidebar.selectbox('Menu',menu)
 if(choice=='Home'):
     st.write("Scroll dwon to see the current parameters")
-    st.json(data_json1,expanded=FALSE)
+    st.json(data_json1,expanded=False)
     st.write(data_json2)
     st.write("Check out Analysis Section for more information")
 elif(choice=='Analysis'):
