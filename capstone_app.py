@@ -40,4 +40,4 @@ elif(choice=='Analysis'):
     chart_data = pd.DataFrame(np.random.randn(20, 3),columns=['a', 'b', 'c'])
     st.line_chart(chart_data)
     st.write(dafra)
-    st.line_chart(dafra,*,x=['entry_id'],y=['field1','field2','field3'])
+    st.line_chart(dafra,,x=['entry_id'],y=['field1','field2','field3'])
