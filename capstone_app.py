@@ -40,4 +40,8 @@ elif(choice=='Analysis'):
     chart_data = pd.DataFrame(np.random.randn(20, 3),columns=['a', 'b', 'c'])
     st.line_chart(chart_data)
     st.write(dafra)
-    st.line_chart(dafra,*,['entry_id'],['field1','field2','field3'])
+    st.line_chart(dafra)
+    import altair as alt
+    chart_data = pd.DataFrame(np.random.randn(20, 3),columns=['a', 'b', 'c'])
+    c = alt.Chart(chart_data).mark_circle().encode(x='a', y='b', size='c', color='c', tooltip=['a', 'b', 'c'])
+    st.altair_chart(c, use_container_width=True)
