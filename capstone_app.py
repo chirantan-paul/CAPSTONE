@@ -6,7 +6,7 @@ from pandas import json_normalize
 import streamlit as st
 from urllib.request import urlopen
 import json
-import matplotlib
+import matplotlib.pyplot
 
 url1 = "https://thingspeak.com/channels/1995845/feed.json"
 url2 = "https://thingspeak.com/channels/1538779/feeds/last.json"
