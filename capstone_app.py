@@ -15,14 +15,14 @@ data_json1 = json.loads(response1.read())
 data_json2 = json.loads(response2.read())
 
 st.title("Welcome To Our Boost Converter Monitoring Online UI")
-st.write("Scroll dwon to see the current parameters")
-st.json(data_json1)
-st.write(data_json2)
 
 menu = ["Home", "Analysis"]
 choice = st.sidebar.selectbox('Menu',menu)
 if(choice=='Home'):
-    st.write("Check out Analysis Section")
+    st.write("Scroll dwon to see the current parameters")
+    st.json(data_json1,expanded=FALSE)
+    st.write(data_json2)
+    st.write("Check out Analysis Section for more information")
 elif(choice=='Analysis'):
     st.write("Analysis Section")
     dataframe=pd.DataFrame(data_json1['feeds'], columns=['entry_id','field1','field2','field3'])
