@@ -2,7 +2,6 @@ import io
 import numpy as np
 import altair as alt
 import pandas as pd
-import matplotlib.pyplot as plt
 from pandas import json_normalize
 import streamlit as st
 from urllib.request import urlopen
