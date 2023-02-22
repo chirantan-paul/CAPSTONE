@@ -18,6 +18,7 @@ data_json2 = json.loads(response2.read())
 st.write(data_json2)
 
 dataframe=json_normalize(data_json1['feeds'])
+dafra=pd.DataFrame(data_json1['feeds'])
 st.title("Welcome To Our Boost Converter Monitoring Online UI")
 st.write("Click to see the current parameters")
 menu = ["Home", "Analysis"]
@@ -38,3 +39,4 @@ elif(choice=='Analysis'):
     st.pyplot(fig)
     chart_data = pd.DataFrame(np.random.randn(20, 3),columns=['a', 'b', 'c'])
     st.line_chart(chart_data)
+    st.line_chart(dafra)
