@@ -6,7 +6,7 @@ from pandas import json_normalize
 import streamlit as st
 from urllib.request import urlopen
 import json
-import matplotlib.pylot as plt
+matplotlib
 
 url1 = "https://thingspeak.com/channels/1995845/feed.json"
 url2 = "https://thingspeak.com/channels/1538779/feeds/last.json"
@@ -33,6 +33,4 @@ elif(choice=='Analysis'):
     st.bar_chart(dataframe['field2'])
     st.line_chart(dataframe['field3'])
     st.bar_chart(dataframe['field3'])
-    fig = plt.figure()
-    plt.plot(dataframe['field1'])
-    st.pyplot(fig)
+   
