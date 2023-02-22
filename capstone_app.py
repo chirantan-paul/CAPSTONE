@@ -40,3 +40,6 @@ elif(choice=='Analysis'):
     st.altair_chart(alt.layer(alt.Chart(dataframe).mark_line(color='blue').encode(x='entry_id:O',y='field1:Q').interactive(),
                               alt.Chart(dataframe).mark_line(color='yellow').encode(x='entry_id:O',y='field2:Q').interactive(),
                               alt.Chart(dataframe).mark_line(color='red').encode(x='entry_id:O',y='field3:Q').interactive()),use_container_width=True)
+    st.altair_chart(alt.layer(alt.Chart(dataframe).mark_area(color='blue').encode(x='entry_id:O',y='field1:Q').interactive(),
+                              alt.Chart(dataframe).mark_area(color='yellow').encode(x='entry_id:O',y='field2:Q').interactive(),
+                              alt.Chart(dataframe).mark_area(color='red').encode(x='entry_id:O',y='field3:Q').interactive()),use_container_width=True)
