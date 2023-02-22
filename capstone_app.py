@@ -26,6 +26,7 @@ if(choice=='Home'):
 elif(choice=='Analysis'):
     st.write("Analysis Section")
     dataframe=pd.DataFrame(data_json1['feeds'], columns=['entry_id','field1','field2','field3'])
+    st.write(json_normalize(data_json1['feeds']))
     st.write(dataframe)
     st.altair_chart(alt.Chart(dataframe).mark_line(color='yellow').encode(x='entry_id:O',y='field1:Q').interactive(),use_container_width=True)
     st.altair_chart(alt.Chart(dataframe).mark_line(color='red').encode(x='entry_id:O',y='field2:Q').interactive(),use_container_width=True)
