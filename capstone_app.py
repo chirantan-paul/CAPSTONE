@@ -27,19 +27,18 @@ elif(choice=='Analysis'):
     st.write("Analysis Section")
     dataframe=pd.DataFrame(data_json1['feeds'], columns=['entry_id','field1','field2','field3'])
     st.write(dataframe)
-    st.altair_chart(alt.Chart(dataframe).mark_line().encode(x='entry_id:O',y='field1:Q').interactive(),use_container_width=True)
-    st.altair_chart(alt.Chart(dataframe).mark_line().encode(x='entry_id:O',y='field2:Q').interactive(),use_container_width=True)
-    st.altair_chart(alt.Chart(dataframe).mark_line().encode(x='entry_id:O',y='field3:Q').interactive(),use_container_width=True)
-    st.altair_chart(alt.Chart(dataframe).mark_area().encode(x='entry_id:O',y='field1:Q').interactive(),use_container_width=True)
-    st.altair_chart(alt.Chart(dataframe).mark_area().encode(x='entry_id:O',y='field2:Q').interactive(),use_container_width=True)
-    st.altair_chart(alt.Chart(dataframe).mark_area().encode(x='entry_id:O',y='field3:Q').interactive(),use_container_width=True)
-    st.altair_chart(alt.Chart(dataframe).mark_bar().encode(x='entry_id:O',y='field1:Q').interactive(),use_container_width=True)
-    st.altair_chart(alt.Chart(dataframe).mark_bar().encode(x='entry_id:O',y='field2:Q').interactive(),use_container_width=True)
-    st.altair_chart(alt.Chart(dataframe).mark_bar().encode(x='entry_id:O',y='field3:Q').interactive(),use_container_width=True)
+    st.altair_chart(alt.Chart(dataframe).mark_line(color='yellow').encode(x='entry_id:O',y='field1:Q').interactive(),use_container_width=True)
+    st.altair_chart(alt.Chart(dataframe).mark_line(color='red').encode(x='entry_id:O',y='field2:Q').interactive(),use_container_width=True)
+    st.altair_chart(alt.Chart(dataframe).mark_line(color='purple').encode(x='entry_id:O',y='field3:Q').interactive(),use_container_width=True)
     
     st.altair_chart(alt.layer(alt.Chart(dataframe).mark_line(color='blue').encode(x='entry_id:O',y='field1:Q').interactive(),
                               alt.Chart(dataframe).mark_line(color='yellow').encode(x='entry_id:O',y='field2:Q').interactive(),
                               alt.Chart(dataframe).mark_line(color='red').encode(x='entry_id:O',y='field3:Q').interactive()),use_container_width=True)
-    st.altair_chart(alt.layer(alt.Chart(dataframe).mark_area(color='blue:N').encode(x='entry_id:O',y='field1:Q').interactive(),
-                              alt.Chart(dataframe).mark_area(color='yellow:N').encode(x='entry_id:O',y='field2:Q').interactive(),
-                              alt.Chart(dataframe).mark_area(color='red:N').encode(x='entry_id:O',y='field3:Q').interactive()),use_container_width=True)
+    
+    st.altair_chart(alt.Chart(dataframe).mark_area(color='orange').encode(x='entry_id:O',y='field1:Q').interactive(),use_container_width=True)
+    st.altair_chart(alt.Chart(dataframe).mark_area(color='blue').encode(x='entry_id:O',y='field2:Q').interactive(),use_container_width=True)
+    st.altair_chart(alt.Chart(dataframe).mark_area(color='yellow').encode(x='entry_id:O',y='field3:Q').interactive(),use_container_width=True)
+    
+    st.altair_chart(alt.Chart(dataframe).mark_bar(color='red').encode(x='entry_id:O',y='field1:Q').interactive(),use_container_width=True)
+    st.altair_chart(alt.Chart(dataframe).mark_bar(color='green').encode(x='entry_id:O',y='field2:Q').interactive(),use_container_width=True)
+    st.altair_chart(alt.Chart(dataframe).mark_bar(color='cyan').encode(x='entry_id:O',y='field3:Q').interactive(),use_container_width=True)
