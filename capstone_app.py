@@ -44,4 +44,4 @@ elif(choice=='Analysis'):
     import altair as alt
     sourc=pd.DataFrame(data_json1['feeds'], columns=['field1','field2'])
     st.write(sourc)
-    st.altair_chart(alt.Chart(sourc).mark_line().encode(x='field1:O',y='Field2:Q'))
+    st.altair_chart(alt.Chart(sourc).mark_line().encode(x='field1:N',y='Field2:Q'))
