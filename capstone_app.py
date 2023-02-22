@@ -47,3 +47,6 @@ elif(choice=='Analysis'):
     st.altair_chart(alt.Chart(sourc).mark_line().encode(x='entry_id:O',y='field1:N'))
     st.altair_chart(alt.Chart(sourc).mark_line().encode(x='entry_id:O',y='field2:N'))
     st.altair_chart(alt.Chart(sourc).mark_line().encode(x='entry_id:O',y='field3:N'))
+    st.altair_chart(alt.Chart(sourc).mark_bar().encode(x='entry_id:O',y='field1:N'))
+    st.altair_chart(alt.Chart(sourc).mark_bar().encode(x='entry_id:O',y='field2:N'))
+    st.altair_chart(alt.Chart(sourc).mark_bar().encode(x='entry_id:O',y='field3:N'))
