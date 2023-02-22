@@ -18,7 +18,7 @@ data_json2 = json.loads(response2.read())
 st.write(data_json2)
 
 dataframe=json_normalize(data_json1['feeds'])
-dafra=pd.DataFrame(data_json1['feeds'], columns=['entry_id','field1','field2','field3'])
+dafra=pd.DataFrame(data_json1['feeds'], columns=['field1','field2','field3'])
 st.title("Welcome To Our Boost Converter Monitoring Online UI")
 st.write("Click to see the current parameters")
 menu = ["Home", "Analysis"]
@@ -42,5 +42,5 @@ elif(choice=='Analysis'):
     st.write(dafra)
     st.line_chart(dafra)
     import altair as alt
-    c = alt.Chart(dafra).mark_circle().encode(x='entry_id', y='filed1', size='c', color='c')
+    c = alt.Chart(dafra).mark_circle().encode(y='filed1', size='c', color='c')
     st.altair_chart(c, use_container_width=True)
