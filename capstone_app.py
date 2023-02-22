@@ -42,6 +42,6 @@ elif(choice=='Analysis'):
     st.write(dafra)
     st.line_chart(dafra)
     import altair as alt
-    sourc=pd.DataFrame(data_json1['feeds'], columns=['created_at','field1'])
+    sourc=pd.DataFrame(data_json1['feeds'], columns=['entry_id','field1'])
     st.write(sourc)
-    st.altair_chart(alt.Chart(sourc).mark_line().encode(x='created_at:',y='Field1:Q'))
+    st.altair_chart(alt.Chart(sourc).mark_line().encode(x='entry_id:',y='Field1:Q'))
