@@ -33,4 +33,6 @@ elif(choice=='Analysis'):
     st.bar_chart(dataframe['field2'])
     st.line_chart(dataframe['field3'])
     st.bar_chart(dataframe['field3'])
-   
+    fig = matplotlib.pyplot.figure()
+    matplotlib.pyplot.plot(dataframe['field1'])
+    st.pyplot(fig)
