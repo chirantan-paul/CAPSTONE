@@ -37,7 +37,7 @@ elif(choice=='Analysis'):
     st.write("Line Chart for Power")
     st.altair_chart(alt.Chart(dataframe).mark_line(color='purple').encode(x='entry_id:O',y='field3:Q').interactive(),use_container_width=True)
     
-    st.write("Line Chart Comparison of Voltage, Current and Power")
+    st.write("Line Chart Comparison of  Voltage, Current and Power")
     st.altair_chart(alt.layer(alt.Chart(dataframe).mark_line(color='blue').encode(x='entry_id:O',y='field1:Q').interactive(),
                               alt.Chart(dataframe).mark_line(color='yellow').encode(x='entry_id:O',y='field2:Q').interactive(),
                               alt.Chart(dataframe).mark_line(color='red').encode(x='entry_id:O',y='field3:Q').interactive()),use_container_width=True)
