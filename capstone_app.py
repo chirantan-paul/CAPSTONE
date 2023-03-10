@@ -31,7 +31,7 @@ elif(choice=='Analysis'):
     st.write(json_normalize(data_json1['feeds']))
     st.write(dataframe)
     st.write("Line Chart for Voltage")
-    st.altair_chart(alt.Chart(dataframe).mark_line(color='yellow').encode(x=alt.X('entry_id:O',axis=alt.Axis(labelAngle=90)),y='field1:Q').interactive(),use_container_width=True)
+    st.altair_chart(alt.Chart(dataframe).mark_line(color='yellow').encode(x=alt.X('entry_id:O',axis=alt.Axis(labelAngle=-90)),y='field1:Q').interactive(),use_container_width=True)
     st.write("Line Chart for Current")
     st.altair_chart(alt.Chart(dataframe).mark_line(color='red').encode(x='entry_id:O',y='field2:Q').interactive(),use_container_width=True)
     st.write("Line Chart for Power")
